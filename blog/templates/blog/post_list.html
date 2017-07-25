@@ -3,7 +3,19 @@
           <title> bulaso`s blog</title>
       </head>
       <body>
-          <div>
+
+            <div>
+                <h1><a href="/">Bulaso`s Blog</a></h1>
+            </div>
+
+            {% for post in posts %}
+                <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
+          <!-- <div>
               <h1><a href=""> bulaso`s blog</a></h1>
           </div>
 
@@ -17,6 +29,6 @@
               <p>published: 25.07.2017, 21:40</p>
               <h2><a href="">Segundo post</a></h2>
               <p>hola hola hola hola.</p>
-          </div>
+          </div> -->
       </body>
   </html>
